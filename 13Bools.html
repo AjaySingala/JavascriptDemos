@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        var x1 = 0;             // false.
+        alert("x1: " + x1 + " : " + Boolean(x1));
+        var x2 = -0;            // false.
+        alert("x2: " + x2 + " : " + Boolean(x2));
+        var x3 = -3;            // true
+        alert("x3: " + x3 + " : " + Boolean(x3));
+        var x4 = 100;           // true
+        alert("x4: " + x4 + " : " + Boolean(x4));
+        var x5 = "";            // empty string. false.
+        alert("x5: " + x5 + " : " + Boolean(x5));
+        var x6;                 // undefined. false.
+        alert("x6: " + x6 + " : " + Boolean(x6));
+        var x7 = null;          // null. false.
+        alert("x7: " + x7 + " : " + Boolean(x7));
+        var x8 = 200 / "Hello"; // NaN. false.
+        alert("x8: " + x8 + " : " + Boolean(x8));
+
+    </script>
+
+</body>
+
+</html>

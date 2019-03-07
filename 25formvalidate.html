@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                var tips = "Enter the name";
+                alert("Name must be filled out");
+                document.forms["myForm"]["fname"].title = tips;                
+                return false;
+            }
+        }
+        function setTooltip() {
+            document.forms["myForm"]["fname"].title = "";
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="01FirstJSDate.html" 
+        onsubmit="return validateForm()" 
+        method="post">
+        Name: <input type="text" name="fname" onchange="setTooltip()" >
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

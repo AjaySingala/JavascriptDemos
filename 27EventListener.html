@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // function init() {
+        //     document.getElementById("btnClick").addEventListener("click", showName);
+        // }
+
+        function showName() {
+            var name = document.getElementById("fname").value;
+            alert("You entered " + name);
+        }
+        
+        function showNameAgain() {
+            var name = document.getElementById("fname").value;
+            alert("You entered the name " + name);
+        }
+    </script>
+</head>
+
+<!-- <body onload="init()"> -->
+<body onload="init()">
+
+    Name: <input type="text" id="fname" />
+    <button id="btnClick">Click Me!</button>
+
+    <script>
+        document.getElementById("btnClick").addEventListener("click", showName);
+        document.getElementById("btnClick").addEventListener("click", showNameAgain);
+    </script>
+</body>
+
+</html>

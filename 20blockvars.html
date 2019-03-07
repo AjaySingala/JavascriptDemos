@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var x = 10;
+        function go() {
+            alert(x);
+
+            {
+                x = 20;
+                alert(x);
+            }
+            alert(x);
+        }
+
+        function go2() {
+            var y = 10;
+            alert(y)
+            {
+                let y = 20;
+                alert(y);
+            }
+            alert(y);
+        }
+        //alert("x = " + x);
+        //alert("y = " + y);
+
+        // The following is not allowed
+        //let a = 10;   // allowed
+        //let a = 25;   // not allowed
+
+        //let a = 10;   // allowed
+        //var a = 25;   // not allowed
+
+        //var a = 10;   // allowed
+        //let a = 25;   // not allowed
+
+        // This is allowed
+        // let x = 2;       // Allowed
+        // {
+        //     let x = 3;   // Allowed
+        // }
+        // {
+        //     let x = 4;   // Allowed
+        // }
+
+        function loop() {
+            var i = 5;
+            alert("value of i before the loop is " + i);
+            for (var i = 0; i < 50; i++) {
+
+            }
+            alert("value of i after the loop is " + i);
+
+            let x = 5;
+            alert("value of x before the loop is " + x);
+            for (let x = 0; x < 50; x++) {
+
+            }
+            alert("value of x after the loop is " + x);
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="go()">Click Me!</button>
+    <button onclick="go2()">Try me!</button>
+    <button onclick="loop()">Loop Var Test</button>
+</body>
+
+</html>
