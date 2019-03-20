@@ -3,9 +3,9 @@
 
 <head>
     <script>
-        // function init() {
-        //     document.getElementById("btnClick").addEventListener("click", showName);
-        // }
+        function init() {
+            document.getElementById("btnClick").addEventListener("click", showName);
+        }
 
         function showName() {
             var name = document.getElementById("fname").value;
@@ -18,17 +18,17 @@
         }
     </script>
 </head>
-
 <!-- <body onload="init()"> -->
-<body onload="init()">
+<body>
 
     Name: <input type="text" id="fname" />
     <button id="btnClick">Click Me!</button>
-
     <script>
         document.getElementById("btnClick").addEventListener("click", showName);
         document.getElementById("btnClick").addEventListener("click", showNameAgain);
     </script>
+    
+    
 </body>
 
 </html>
