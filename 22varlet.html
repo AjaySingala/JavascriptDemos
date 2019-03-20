@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>var and let</h2>
+    <script>
+		var x= 10;
+		//let x = 20;
+		function test(x) {
+			alert(".." + x);
+			var x = 35;
+			alert("..." + x);
+			{
+				let x = 15;
+			}
+			alert("...." + x);
+		}
+		alert("." + x);
+		test(100);
+		var x = 200;
+		alert("....." + x);
+		test(x);
+    </script>
+
+</body>
+
+</html>
