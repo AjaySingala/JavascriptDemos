@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<body onload="show()">
+
+		<div>
+            <br>
+            <label>Firstname: </label>
+			<label id="lblFirstname"></label>
+            <br>
+            <label>Lastname: </label>
+            <label id="lblLastname"></label>
+            <br>
+		</div>
+		
+		<script>
+			function show() {
+				// Check browser support
+				if (typeof(Storage) !== "undefined") {
+					// Retrieve
+					var newPerson = JSON.parse(localStorage.getItem("person"));
+					document.getElementById("lblFirstname").innerText = newPerson.firstname;
+                    document.getElementById("lblLastname").innerText = newPerson.lastname;
+					localStorage.clear();
+				} else {
+					document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>

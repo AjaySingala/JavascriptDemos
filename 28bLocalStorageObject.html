@@ -10,6 +10,8 @@
 			<input type="text" id="txtLastname" />
 			<br>
 			<button onclick="show();">Show Fullname</button>
+			<br>
+			<a href="28cLocalStorageShow.html">Show Data</a>
 		</div>
 		<div id="result"></div>
 
@@ -26,7 +28,7 @@
 					// Retrieve
 					var newPerson = JSON.parse(localStorage.getItem("person"));
 					document.getElementById("result").innerHTML = newPerson.lastname + ", " + newPerson.firstname;
-					localStorage.clear();
+					//localStorage.clear();
 				} else {
 					document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 				}
