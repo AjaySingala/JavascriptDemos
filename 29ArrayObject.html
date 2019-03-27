@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<body onload="show()">
+		<div>
+            <br>
+            <label>Product Name: </label>
+			<label id="lblProductname"></label>
+            <br>
+            <label>Categories: </label>
+            <div id="divCategories"></div>
+                <ul id="categories">
+
+                </ul>
+            <br>
+		</div>
+		
+		<script>
+			function show() {
+				var product = {
+                    "id": "101",
+                    "name" : "Ball Pen",
+                    "categories" : ["Stationery", "Miscellaneous", "Others"]
+                };
+
+                document.getElementById("lblProductname").innerText = product.name;
+                var cats = product.categories;
+                var ulCategory = document.getElementById("categories");
+                cats.forEach( function(element) {
+                    var li = document.createElement("li");
+                    li.appendChild(document.createTextNode(element));
+                    ulCategory.appendChild(li);
+
+                });
+			}
+			
+		</script>
+
+	</body>
+</html>
