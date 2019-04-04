@@ -1,20 +1,5 @@
 var people = [];
 
-var x = 10;
-
-function testA() {
-    alert(x);
-    x = 20;
-    alert(x);
-    testB();
-    alert(x);
-}
-
-function testB() {
-    alert("In testB: " + x);
-    x = 40;
-}
-
 function addPersonToArray() {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;

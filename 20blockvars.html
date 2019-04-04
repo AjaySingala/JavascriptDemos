@@ -2,9 +2,30 @@
 <html>
 
 <head>
-    <script src="people.js" />
+    <!-- <script src="blockvars.js"></script> -->
     <script>
         var x = 10;
+        function testA() {
+            //var x = 10;
+            alert(x);
+            x = 20;
+            alert(x);
+            testB();
+            alert(x);
+            {
+                alert(x);
+                var x = 19;
+                alert(x);
+            }
+            alert(x);
+        }
+
+        function testB() {
+            alert("In testB: " + x);
+            x = 40;
+        }
+
+        
         function go() {
             alert(x);
 
@@ -63,13 +84,15 @@
         }
 
     </script>
+
 </head>
 
 <body>
-    <button onclick="go()">Click Me!</button>
-    <button onclick="go2()">Try me!</button>
+    <button onclick="go();">Click Me!</button>
+    <button onclick="go2();">Try me!</button>
     <button onclick="loop()">Loop Var Test</button>
     <button onclick="testA()">Test A & B</button>
+    <button onclick="testB()">Test B</button>
 </body>
 
 </html>
