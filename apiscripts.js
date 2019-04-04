@@ -1,4 +1,4 @@
-function callAPI() {
+ function callAPI() {
     // Create a request variable and assign a new XMLHttpRequest object to it.
     var request = new XMLHttpRequest();
 
@@ -12,7 +12,7 @@ function callAPI() {
         if (request.status >= 200 && request.status < 400) {
             data.forEach(movie => {
                 console.log(movie.title);
-                list += "<br>" + movie.title;
+                list += "<br>" + movie.title + ". " + movie.director;
             });
             document.getElementById("root").innerHTML = list;
         } else {

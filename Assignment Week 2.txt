@@ -1,0 +1,10 @@
+Develop a game
+use at least 12 HTML elements
+use at least 3 css selectors
+use at least 2 events
+use at least 1 dynamic event listener
+
+Example games:
+	Tic tac toe
+	matching cards
+	
