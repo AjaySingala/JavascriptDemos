@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function show() {
+                // document.getElementById("result").innerHTML = "";
+                // var opt = document.getElementById("optOne");
+                // if(opt.checked) {
+                //     document.getElementById("result").innerHTML = 
+                //         opt.value + ":" + opt.innerHTML;
+                // }
+
+                var opts = document.getElementsByName("status");
+                for(var o in opts) {
+                    if(opts[o].checked) {
+                        document.getElementById("result").innerHTML = opts[o].value;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Status:
+        <input id="optOne" type="radio" name="status" value="1">One</input>
+        <input id="optTwo" type="radio" name="status" value="2">Two</input>
+        <input id="optThree" type="radio" name="status" value="3">Three</input>
+        <input id="optFour" type="radio" name="status" value="4">Four</input>
+        <br>
+        <button onclick="show();">Show</button>
+        <br>
+        <div id="result"></div>
+    </body>
+</html>
